@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Navigation() {
     const [nav, setNav] = useState(false);
@@ -15,53 +16,64 @@ function Navigation() {
     ];
 
     return (
-        <div className='flex justify-between items-center h-32 max-w-full px-10 text-white'>
-            {/* Logo */}
-            <img src="../images/logo.svg" style={{width:'170px'}}/>
+        <div className='relative'>
+            <div className='flex justify-between items-center h-32 max-w-full px-10 text-white'>
+                {/* Logo */}
+                <img src="../images/logo.svg" style={{ width: '170px' }} />
 
-            {/* Desktop Navigation */}
-            <ul className='hidden md:flex'>
-                {navItems.map(item => (
-                    <li
-                        key={item.id}
-                        className='
-                        p-4
-                        px-10 
-                        m-2 
-                        my-4 
-                        active:bg-ss_white 
-                        active:text-ss_v-dark-des-blue
-                        hover:bg-ss_white/20 
-                        hover:text-ss_white 
-                        rounded-full 
-                        cursor-pointer 
-                        duration-300'>
-                        {item.text}
-                    </li>
-                ))}
-            </ul>
+                {/* Desktop Navigation */}
+                <ul className='hidden md:flex'>
+                    {navItems.map(item => (
+                        <li
+                            key={item.id}
+                            className={`
+                                py-4
+                                px-[35px]
+                                active:bg-ss_white 
+                                active:text-ss_v-dark-des-blue
+                                ${item.text === 'Contact' ? 'bg-ss_white text-black' : 'hover:bg-ss_white/20 hover:text-ss_white'} 
+                                ${item.text === 'Contact' ? 'uppercase' : 'normal-case'}
+                                rounded-full 
+                                cursor-pointer 
+                                duration-300`
+                            }
+                        >
+                            {item.text}
+                        </li>
+                    ))}
+                </ul>
 
-            {/* Mobile Navigation Icon
-            <div onClick={handleNav} className='block md:hidden'>
-                {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-            </div> */}
+
+                {/* Mobile Navigation Icon */}
+                <div onClick={handleNav} className='block md:hidden'>
+                    {nav ? <MenuIcon size={20} /> : <MenuIcon size={20} />}
+                </div>
+            </div>
 
             {/* Mobile Navigation Menu */}
             <ul
                 className={
                     nav
-                        ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-                        : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+                        ? 'absolute m-4 items-center w-full bg-ss_white ease-in-out duration-500'
+                        : 'hidden'
                 }
+                style={{ top: 'calc(100% - 32px)' }}
             >
                 {/* Mobile Logo */}
-                <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
+                <img src="../images/logo.svg" style={{ width: '170px' }} />
 
                 {/* Mobile Navigation Items */}
                 {navItems.map(item => (
                     <li
                         key={item.id}
-                        className='p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
+                        className={`
+                            p-4 
+                            ${item.text === 'Contact' ? 'bg-ss_yellow text-ss_v-dark-grayish-blue' : 'hover:bg-ss_white/20 hover:text-ss_white'} 
+                            ${item.text === 'Contact' ? 'uppercase' : 'normal-case'}
+                            duration-300 
+                            border-gray-600 
+                            cursor-pointer
+                        `}
                     >
                         {item.text}
                     </li>
