@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '../../images/logo.svg'
 
 function Navigation() {
     const [nav, setNav] = useState(false);
@@ -17,7 +18,7 @@ function Navigation() {
     return (
         <div className='flex justify-between items-center h-32 max-w-full px-10 text-white'>
             {/* Logo */}
-            <img src="../images/logo.svg" style={{width:'170px'}}/>
+            <img src={logo} style={{width:'170px'}}/>
 
             {/* Desktop Navigation */}
             <ul className='hidden md:flex'>

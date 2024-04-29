@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -6,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'barlow': ['Barlow', 'sans-serif'],
+        'fraunces': ['Fraunces Variable', 'serif']
+      },
       colors: {
         'ss_soft-red': 'hsl(7, 99%, 70%)',
         'ss_yellow': 'hsl(51, 100%, 49%)',
