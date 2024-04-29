@@ -68,6 +68,7 @@ function Navigation() {
                         key={item.id}
                         className={`
                             p-4 
+                            w-fit
                             ${item.text === 'Contact' ? 'bg-ss_yellow text-ss_v-dark-grayish-blue' : 'hover:bg-ss_white/20 hover:text-ss_white'} 
                             ${item.text === 'Contact' ? 'uppercase' : 'normal-case'}
                             duration-300 
