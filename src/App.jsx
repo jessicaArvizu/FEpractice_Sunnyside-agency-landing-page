@@ -8,6 +8,7 @@ import imgTransform from '../src/images/desktop/image-transform.jpg'
 import imgStandOut from '../src/images/desktop/image-stand-out.jpg'
 import imgGraphicDesign from '../src/images/desktop/image-graphic-design.jpg'
 import imgPhotography from '../src/images/desktop/image-photography.jpg'
+import Testimonials from './components/Testimonials/Testimonials';
 
 function App() {
 
@@ -17,67 +18,81 @@ function App() {
       <Hero />
 
       <div className='grid grid-cols-1 lg:grid-cols-2'>
-        <div className='bg-red-500'>
-          Transform your brand
+        <div className='flex flex-col justify-center space-y-10 pl-40'>
+          <h2 className='text-[40px] font-black leading-[50px] pr-40'>
+            Transform your brand
+          </h2>
 
-          We are a full-service creative agency specializing in helping brands grow fast.
-          Engage your clients through compelling visuals that do most of the marketing for you.
+          <p className='text-[18px] font-semibold'>
+            We are a full-service creative agency specializing in helping brands grow fast.
+            Engage your clients through compelling visuals that do most of the marketing for you.
+          </p>
 
-          Learn more
+          <h3>
+            <a className='hover:underline uppercase font-black'>
+              Learn more
+            </a>
+          </h3>
         </div>
-        <div className='bg-blue-500'>
+        <div>
           <img src={imgTransform} alt='Egg on a yellow background.' />
         </div>
       </div>
 
       <div className='grid grid-cols-1	lg:grid-cols-2'>
-        <div className='bg-purple-500'>
+        <div>
           <img src={imgStandOut} alt='Coralish Pink glass cup on a darker coral background.' />
         </div>
-        <div className='bg-yellow-500'>
+        <div className='flex flex-col justify-center items-center'>
 
-          Stand out to the right audience
+        <h2 className='text-4xl font-black'>
+            Stand out to the right audience
+          </h2>
 
-          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+          <p>
+            Using a collaborative formula of designers, researchers, photographers,
+            videographers, and copywriters, we’ll build and extend your brand in digital places.
+          </p>
 
-          Learn more
+          <h3>
+            <a>
+              Learn more
+            </a>
+          </h3>
         </div>
       </div>
 
       <div className='grid grid-cols-1 lg:grid-cols-2'>
-        <div className='bg-orange-500'>
+        <div className='relative'>
           <img src={imgGraphicDesign} alt='Cherries on a green background.' />
 
-          Graphic design
-          Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
+          <div className="absolute top-80 left-0 right-0 bottom-0 flex flex-col justify-center items-center p-36">
+            <h2 className="text-3xl font-bold mb-4 font-black text-ss_dark-des-cyan">
+              Graphic Design
+            </h2>
+            <p className="font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-des-cyan">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
         </div>
-        <div className='bg-teal-500'>
+        <div className='relative'>
           <img src={imgPhotography} alt='Tangerine on a teal background.' />
 
-          Imagen mandarina
-
-          Photography
-          Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
+          <div className="absolute top-80 left-0 right-0 bottom-0 flex flex-col justify-center items-center p-36">
+            <h2 className="text-3xl font-bold mb-4 font-black text-ss_dark-blue">
+              Photography
+            </h2>
+            <p className="font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-blue">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div>
-        Client testimonials
-
-        We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-        Emily R.
-        Marketing Director
-
-        Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-        Thomas S.
-        Chief Operating Officer
-
-        Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-        Jennie F.
-        Business Owner
-      </div>
+      <Testimonials />
 
       <Gallery />
 
