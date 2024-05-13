@@ -10,11 +10,11 @@ const Hero = () => {
         <section className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imgHero})`, height: heroHeight }}>
             <Navigation />
 
-            <div className={'flex flex-col justify-center items-center text-center text-ss_white mt-20'}>
-                <h1 className="text-6xl font-black uppercase font-fraunces tracking-widest">
+            <div className={'flex flex-col justify-center items-center text-center text-ss_white mt-[60px]'}>
+                <h1 className="text-[60px] font-black uppercase font-fraunces tracking-widest">
                     We are creatives
                 </h1>
-                <img src={imgArrow} alt="Arrow Down Icon" className="mt-20" />
+                <img src={imgArrow} alt="Arrow Down Icon" className="mt-[100px]" />
             </div>
         </section>
     )
