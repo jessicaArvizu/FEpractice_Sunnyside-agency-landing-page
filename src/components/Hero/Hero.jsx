@@ -14,7 +14,7 @@ const Hero = () => {
                 <h1 className="text-[60px] font-black uppercase font-fraunces tracking-widest">
                     We are creatives
                 </h1>
-                <img src={imgArrow} alt="Arrow Down Icon" className="mt-[100px]" />
+                <img src={imgArrow} alt="Arrow Down Icon" className="mt-[80px]" />
             </div>
         </section>
     )
