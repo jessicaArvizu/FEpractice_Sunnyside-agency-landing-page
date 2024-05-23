@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Card(props) {
     return (
-        <div className='flex flex-col justify-center items-center text-center px-4'>
+        <div className='flex flex-col justify-center items-center text-center px-4 space-y-6 mt-12'>
             <img className="rounded-full" width={'70px'} src={props.img}></img>
             <p className='leading-8 mt-14'>
                 {props.testimonial}
@@ -10,7 +10,7 @@ function Card(props) {
             <h2 className='font-black mt-16'>
                 {props.name}
             </h2>
-            <p className='text-sm mt-4'>
+            <p className='text-sm mt-4 text-ss_dark-grayish-blue'>
                 {props.position}
             </p>
         </div>

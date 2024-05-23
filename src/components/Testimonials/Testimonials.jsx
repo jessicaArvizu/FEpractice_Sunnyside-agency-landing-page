@@ -5,8 +5,8 @@ import imgThomas from "../../images/image-thomas.jpg"
 
 function Testimonials() {
     return (
-        <div className="p-40">
-            <h2 className="uppercase font-bold tracking-[5px] flex justify-center items-center text-center text-[20px]">
+        <div className="lg:p-40 p-20">
+            <h2 className="uppercase font-bold tracking-[5px] flex justify-center items-center text-center text-[20px] text-ss_dark-grayish-blue">
                 Client testimonials
             </h2>
 
