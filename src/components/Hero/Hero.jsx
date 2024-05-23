@@ -10,7 +10,7 @@ const Hero = () => {
         <section className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imgHero})`, height: heroHeight }}>
             <Navigation />
 
-            <div className={'flex flex-col justify-center items-center text-center text-ss_white mt-[60px]'}>
+            <div className={'flex flex-col justify-center items-center text-center text-ss_white leading-snug mt-[60px]'}>
                 <h1 className="text-[60px] font-black uppercase font-fraunces tracking-widest">
                     We are creatives
                 </h1>

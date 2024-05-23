@@ -18,12 +18,12 @@ function App() {
       <Hero />
 
       <div className='grid grid-cols-1 lg:grid-cols-2'>
-        <div className='flex flex-col justify-center space-y-10 pl-40'>
-          <h2 className='text-[40px] font-black leading-[50px] pr-40'>
+        <div className='flex flex-col justify-center text-center p-20 space-y-10 lg:pl-40 lg:order-2 order-2'>
+          <h2 className='text-[40px] font-black leading-[50px] lg:pr-40 lg:pt-2'>
             Transform your brand
           </h2>
 
-          <p className='text-[18px] font-semibold pr-28 leading-relaxed	'>
+          <p className='text-[18px] font-semibold lg:pr-28 leading-relaxed'>
             We are a full-service creative agency specializing in helping brands grow fast.
             Engage your clients through compelling visuals that do most of the marketing for you.
           </p>
@@ -34,22 +34,22 @@ function App() {
             </a>
           </h3>
         </div>
-        <div>
+        <div className='lg:order-2 order-1'>
           <img src={imgTransform} alt='Egg on a yellow background.' />
         </div>
       </div>
 
       <div className='grid grid-cols-1	lg:grid-cols-2'>
-        <div>
+        <div className='order-1 lg:order-2'>
           <img src={imgStandOut} alt='Coralish Pink glass cup on a darker coral background.' />
         </div>
-        <div className='flex flex-col justify-center space-y-10 pl-28'>
+        <div className='flex flex-col justify-center text-center space-y-10 p-20 lg:pl-28 lg:order-1 order-2'>
 
-          <h2 className='text-[40px] font-black leading-[50px] pr-40'>
+          <h2 className='text-[40px] font-black leading-[50px] lg:pr-40 pt-2'>
             Stand out to the right audience
           </h2>
 
-          <p className='text-[18px] font-semibold pr-36 leading-relaxed	'>
+          <p className='text-[18px] font-semibold lg:pr-36 leading-relaxed	'>
             Using a collaborative formula of designers, researchers, photographers,
             videographers, and copywriters, we’ll build and extend your brand in digital places.
           </p>
@@ -70,7 +70,7 @@ function App() {
             <h2 className="text-3xl font-bold mb-4 mt-4 font-black text-ss_dark-des-cyan">
               Graphic Design
             </h2>
-            <p className="font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-des-cyan">
+            <p className="text-[16px] font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-des-cyan">
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
@@ -84,7 +84,7 @@ function App() {
             <h2 className="text-3xl font-bold mb-4 mt-4 font-black text-ss_dark-blue">
               Photography
             </h2>
-            <p className="font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-blue">
+            <p className="text-[16px] font-bold px-12 mt-4 text-center leading-relaxed text-ss_dark-blue">
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
