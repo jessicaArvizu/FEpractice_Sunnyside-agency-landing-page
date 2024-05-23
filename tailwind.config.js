@@ -11,6 +11,15 @@ export default {
         'barlow': ['Barlow', 'sans-serif'],
         'fraunces': ['Fraunces Variable', 'serif']
       },
+      keyframes: {
+        underline: {
+          '0%, 100%': { transform: 'scaleX(1)' },
+          '50%': { transform: 'scaleX(1.1)' },
+        },
+      },
+      animation: {
+        'underline-grow': 'underline 0.3s ease-in-out',
+      },
       colors: {
         'ss_soft-red': 'hsl(7, 99%, 70%)',
         'ss_yellow': 'hsl(51, 100%, 49%)',

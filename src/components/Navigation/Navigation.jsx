@@ -1,5 +1,6 @@
 import { useState } from "react";
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.svg';
+import menuIcon from '../../images/icon-hamburger.svg';
 
 function Navigation() {
     const [nav, setNav] = useState(false);
@@ -16,53 +17,62 @@ function Navigation() {
     ];
 
     return (
-        <div className='flex justify-between items-center h-32 max-w-full px-10 text-white'>
+        <div className='flex justify-between items-center h-32 max-w-full px-10 text-black'>
             {/* Logo */}
-            <img src={logo} style={{width:'170px'}}/>
+            <img src={logo} style={{ width: '170px' }} />
 
             {/* Desktop Navigation */}
             <ul className='hidden md:flex'>
                 {navItems.map(item => (
                     <li
                         key={item.id}
-                        className='
-                        p-4
-                        px-10 
-                        m-2 
-                        my-4 
-                        active:bg-ss_white 
-                        active:text-ss_v-dark-des-blue
-                        hover:bg-ss_white/20 
-                        hover:text-ss_white 
-                        rounded-full 
-                        cursor-pointer 
-                        duration-300'>
+                        className={`
+                            p-4
+                            px-10 
+                            m-2 
+                            my-4 
+                            active:bg-ss_white 
+                            active:text-ss_v-dark-des-blue
+                            hover:bg-ss_white/20 
+                            hover:text-ss_white 
+                            rounded-full 
+                            cursor-pointer 
+                            duration-300 
+                            ${item.text === 'Contact' ? 'bg-yellow-400 text-black uppercase' : ''}
+                        `}
+                    >
                         {item.text}
                     </li>
                 ))}
             </ul>
 
-            {/* Mobile Navigation Icon
-            <div onClick={handleNav} className='block md:hidden'>
-                {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-            </div> */}
+            {/* Mobile Navigation Icon */}
+            <div onClick={handleNav} className='block md:hidden cursor-pointer'>
+                <img src={menuIcon} alt='Menu Icon' className='w-8 h-8' />
+            </div>
 
             {/* Mobile Navigation Menu */}
             <ul
                 className={
                     nav
-                        ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-                        : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+                        ? 'absolute top-20 right-10 w-[90%] md:w-auto bg-white text-black shadow-lg flex flex-col items-center py-4 mt-10 rounded-lg before:content-[""] before:absolute before:-top-2 before:right-6 before:border-8 before:border-transparent before:border-b-white'
+                        : 'hidden'
                 }
             >
-                {/* Mobile Logo */}
-                <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
-
-                {/* Mobile Navigation Items */}
                 {navItems.map(item => (
                     <li
                         key={item.id}
-                        className='p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
+                        className={`
+                            p-4 
+                            text-lg 
+                            text-ss_dark-grayish-blue 
+                            font-bold 
+                            hover:bg-gray-200 
+                            rounded-full 
+                            duration-300 
+                            cursor-pointer 
+                            ${item.text === 'Contact' ? 'bg-yellow-400 text-black uppercase' : ''}
+                        `}
                     >
                         {item.text}
                     </li>

@@ -6,3 +6,47 @@ body {
     font-family: 'Barlow', sans-serif;
     font-size:18px;
 }
+
+/* Custom underline style */
+.learn-more {
+  position: relative;
+  display: inline-block;
+}
+
+/* Custom underline style */
+.learn-more::after {
+  content: '';
+  display: block;
+  width: calc(100% + 15px); /* Adjust width to extend beyond the text */
+  height: 8px; /* Thickness of the underline */
+  background-color: hsla(51, 100%, 49%, 0.5); /* Color of the underline */
+  position: absolute;
+  bottom: 3px; /* Adjust this value to move the underline closer or farther from the text */
+  left: -5px; /* Adjust this value to center the underline */
+  border-radius: 9999px; /* Rounded borders */
+  z-index: -1; /* Ensure the underline is behind the text */
+}
+
+/* Custom underline style */
+.learn-more-2 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Custom underline style */
+.learn-more-2::after {
+  content: '';
+  display: block;
+  width: calc(100% + 15px); /* Adjust width to extend beyond the text */
+  height: 8px; /* Thickness of the underline */
+  background-color: hsla(7, 99%, 70%, 0.5); /* Color of the underline */
+  position: absolute;
+  bottom: 3px; /* Adjust this value to move the underline closer or farther from the text */
+  left: -5px; /* Adjust this value to center the underline */
+  border-radius: 9999px; /* Rounded borders */
+  z-index: -1; /* Ensure the underline is behind the text */
+}
+
+
+
+  

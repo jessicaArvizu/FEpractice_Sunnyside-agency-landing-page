@@ -32,7 +32,7 @@ function App() {
           </p>
 
           <h3>
-            <a className='hover:underline uppercase font-black'>
+          <a className='hover:cursor-pointer learn-more uppercase font-black'>
               Learn more
             </a>
           </h3>
@@ -60,7 +60,7 @@ function App() {
           </p>
 
           <h3>
-            <a className='hover:underline uppercase font-black'>
+          <a className='hover:cursor-pointer learn-more-2 uppercase font-black'>
               Learn more
             </a>
           </h3>
@@ -69,8 +69,8 @@ function App() {
 
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <div className='relative'>
-          <img src={imgGraphicDesignDesktop} alt='Cherries on a green background.' className='hidden lg:block'  />
-          <img src={imgGraphicDesignMobile} alt='Cherries on a green background.' className='block lg:hidden'/>
+          <img src={imgGraphicDesignDesktop} alt='Cherries on a green background.' className='hidden lg:block' />
+          <img src={imgGraphicDesignMobile} alt='Cherries on a green background.' className='block lg:hidden' />
 
 
           <div className="absolute top-80 left-0 right-0 bottom-0 flex flex-col justify-center items-center lg:p-36">
@@ -86,8 +86,8 @@ function App() {
         </div>
 
         <div className='relative'>
-          <img src={imgPhotographyDesktop} alt='Tangerine on a teal background.' className='hidden lg:block'  />
-          <img src={imgPhotographyMobile} alt='Tangerine on a teal background.' className='block lg:hidden'/>
+          <img src={imgPhotographyDesktop} alt='Tangerine on a teal background.' className='hidden lg:block' />
+          <img src={imgPhotographyMobile} alt='Tangerine on a teal background.' className='block lg:hidden' />
 
           <div className="absolute top-80 left-0 right-0 bottom-0 flex flex-col justify-center items-center lg:p-36">
             <h2 className="text-3xl font-bold mb-4 mt-4 font-black text-ss_dark-blue">
